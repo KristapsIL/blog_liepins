@@ -1,5 +1,6 @@
 <?php
-return [   "host"=>"localhost",
+return [
+    "host"=>"localhost",
     "dbname"=>"blog_liepins",
     "user"=>"root",
     "password"=>"",
