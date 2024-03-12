@@ -1,0 +1,32 @@
+body {
+    margin:10;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: lightgoldenrodyellow;
+}
+p{
+    font-family:"Lucida Console", "Courier New", monospace;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: large;
+    padding-left:0;
+    font-family: 'Arial';
+}
+nav{
+   display: flex;
+   justify-content: space-evenly;
+}
+a{
+    color: gray;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 150%;
+}
+li{
+    padding-bottom: 4px;
+    list-style: none;
+}
+a:hover{
+    color:aqua;
+}
