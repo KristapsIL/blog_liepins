@@ -1,8 +1,7 @@
 <?php require "components/head.php" ?>
 <?php require "components/navbar.php" ?>
-<h1>ABOUT US</h1>
 
-<h2>The Blog Revolution: A Tale of the Popular Blogging Platform <em><?= $title ?></em></h2>
+<h1>The Blog Revolution: A Tale of the Popular Blogging Platform <em><?= $title ?></em></h1>
 
 <p>As digital technology spread across the globe like never before, blogging became an even more essential way to share stories, ideas, and discoveries. However, while there were many blogging platforms offering various features, most lacked innovation and user-friendly experiences. That all changed in 2024 when the world was shaken by <?= $title ?> - the future blog platform created by three outstanding programmers:</p>
 
