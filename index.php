@@ -6,7 +6,7 @@ $url = $url_array["path"];
 if($url ==  "/about"){
     require "controllers/about.php";
 }
-if($url ==  "/index"){
+if($url ==  "/index" || $url ==  "/"){
     require "controllers/index.php";
 }
 if($url ==  "/story"){
