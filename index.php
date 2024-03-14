@@ -6,9 +6,12 @@ $url = $url_array["path"];
 if($url ==  "/about"){
     require "controllers/about.php";
 }
-if($url ==  "/index" || $url ==  "/"){
+else if($url ==  "/index" || $url ==  "/"){
     require "controllers/index.php";
 }
-if($url ==  "/story"){
+else if($url ==  "/story"){
     require "controllers/story.php";
+} else{
+    http_response_code(404);
+    require "controllers/404.php";
 }
