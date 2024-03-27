@@ -12,20 +12,10 @@
         <button >Submit</button>
     </form>
 
-    <form>
-        <select name='name'>
-            <option value=''></option>
-            <option value='sport'>sport</option>
-            <option value='music'>music</option>
-            <option value='food'>food</option>
-        </select>
-        <button >Submit</button>
-    </form>
-
     <h1> POSTS </h1>
     <ul>
     <?php foreach($posts as $post){ ?>
-    <li><?= $post["title"] ?></li>
+    <li><?= htmlspecialchars($post["title"]) ?></li>
     <?php } ?>
     </ul>
 <?php require "components/footer.php" ?>

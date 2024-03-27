@@ -1,11 +1,11 @@
 <?php
-require "functions.php";
 require "Database.php";
 
 $config = require ("config.php");
 
 $query = "SELECT * FROM posts";
 $params = [];
+
 if(isset($_GET["id"]) && $_GET["id"] !=null){
     $id = trim($_GET["id"]);
     $query .=" WHERE id =:id";
