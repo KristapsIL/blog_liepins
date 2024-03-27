@@ -9,13 +9,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST" ){
     $errors = [];
 
     if(trim($_POST["title"]) == null){
-        $errors["title"] = "Title connot be empty";
+        $errors["title"] = "Title can not be empty";
     }
     if(strlen($_POST["title"]) > 255){
-        $errors["title"] = "Title connot longer than 255 chars";
+        $errors["title"] = "Title can not be longer than 255 chars";
     }
     if($_POST["category_id"] > 3 || $_POST["category_id"] < 1){
-        $errors["category_id"] = "category invalid";
+        $errors["category_id"] = "category is invalid";
     }
 
     if(empty($errors)){
