@@ -17,8 +17,7 @@
     <?php foreach($posts as $post){ ?>
     <li><?= htmlspecialchars($post["title"]) ?>
         <form class="delete-form" method="POST" action="/delete">
-            <input type="hidden" name="id" value=" <?= $post['id'] ?>">
-            <Button>Delete</Button>
+            <Button name="id" value=" <?= $post['id'] ?>">Delete</Button>
         </form>
     </li>
     <?php } ?>
