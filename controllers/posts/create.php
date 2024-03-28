@@ -35,5 +35,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST" ){
 }
 
 $title = "Create";
-require "views/posts-create.view.php";
+require "views/posts/create.view.php";
 // &&  &&  && strlen($_POST["title"]) <= 255

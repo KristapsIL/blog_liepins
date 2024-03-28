@@ -1,5 +1,5 @@
-<?php require "components/head.php" ?>
-<?php require "components/navbar.php" ?>
+<?php require "views/components/head.php" ?>
+<?php require "views/components/navbar.php" ?>
 <h1>Create posts</h1>
 <form method="POST">
     <label>
@@ -22,4 +22,4 @@
     </label>
     <button>Save</button>
 </form>
-<?php require "components/footer.php" ?>
+<?php require "views/components/footer.php" ?>

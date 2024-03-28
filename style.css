@@ -37,3 +37,6 @@ label{
     top:100%;
     font-size: 0.8em;
 }
+.delete-form{
+    display:inline-block;
+}

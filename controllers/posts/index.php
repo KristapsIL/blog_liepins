@@ -22,7 +22,7 @@ $posts = $db
     ->fetchAll();
 
 $title = "Main";
-require "views/posts.view.php";
+require "views/posts/index.view.php";
 
 
 
