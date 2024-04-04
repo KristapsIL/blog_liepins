@@ -3,8 +3,8 @@
     <h1> POSTS </h1>
     <ul>
     <?php foreach($posts as $post){ ?>
-    <li><a href="/?id=<?= $post['id'] ?> ">
-        <?= htmlspecialchars($post["title"]) ?></a>
+    <li>
+        <?= htmlspecialchars($post["title"]) ?>
         <label>
         <form class="delete-form" method="POST" action="/delete">
             <Button name="id" value=" <?= $post['id'] ?>">Delete</Button>

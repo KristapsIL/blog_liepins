@@ -1,5 +1,6 @@
 <?php
 require "Database.php";
+require "Validator.php";
 
 $config = require ("config.php");
 $db = new Database($config);
@@ -8,13 +9,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST" ){
 
     $errors = [];
 
-    if(trim($_POST["title"]) == null){
-        $errors["title"] = "Title can not be empty";
+    if(!Validator::string($_POST["title"], min: 1,maxlen: 255) ){
+        $errors["title"] = "Title can not be empty or longer than the max lenght";
     }
-    if(strlen($_POST["title"]) > 255){
-        $errors["title"] = "Title can not be longer than 255 chars";
-    }
-    if($_POST["category_id"] > 3 || $_POST["category_id"] < 1){
+    if(!Validator::number($_POST["category_id"], min: 1, maxlen: 3)){
         $errors["category_id"] = "category is invalid";
     }
 
@@ -36,4 +34,3 @@ if($_SERVER["REQUEST_METHOD"] == "POST" ){
 
 $title = "Create";
 require "views/posts/create.view.php";
-// &&  &&  && strlen($_POST["title"]) <= 255

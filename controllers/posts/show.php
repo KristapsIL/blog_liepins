@@ -9,7 +9,7 @@ $query = "SELECT * FROM posts WHERE id = :id";
 $db = new Database($config);
 $posts = $db
     ->execute($query, $params)
-    ->fetch();
+    ->fetchAll();
 
 $title = "Show";
 require "views/posts/show.view.php";
