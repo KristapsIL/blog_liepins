@@ -10,12 +10,11 @@ class Validator{
             && strlen($data) < $maxlen;
  
     }
-    static public function number($data, $min = 0, $maxlen = INF){
+    static public function number($data, $min = 1, $maxlen = INF){
         $data = trim($data);
-        
-        return is_int($data) 
-            && strlen($data) >= $min 
-            && strlen($data) < $maxlen;
+        return is_numeric($data) 
+            && $data >= $min 
+            && $data <= $maxlen;
     }
 
 }

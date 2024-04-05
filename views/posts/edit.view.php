@@ -1,17 +1,24 @@
 <?php require "views/components/head.php" ?>
     <?php require "views/components/navbar.php" ?>
-    <h1> Change title </h1>
+    <h1> Edit post </h1>
 
     <form method="POST">
+    <input name="id" value="<?= $posts["id"] ?>" type="hidden">
     <label >
-        <input name="title" value="<?= $_POST["title"] ?? "" ?>">
+        <input name="title" value="<?= $posts["title"] ?? "" ?>">
+        <?php if(isset($errors["title"])) {?>
+        <p class="error"><?= $errors["title"]?></p>
+        <?php } ?>
     </label>
     <label>
-        <select name="category_id">
-            <option value="1">Sport</option>
-            <option value="2">music</option>
-            <option value="3">food</option>
+        <select name="category_id" >
+            <option value="1" <?= $posts["category_id"] == 1 ? "selected" : "" ?>>Sport</option>
+            <option value="2" <?= $posts["category_id"] == 2 ? "selected" : "" ?>>music</option>
+            <option value="3" <?= $posts["category_id"] == 3 ? "selected" : "" ?>>food</option>
         </select>
+        <?php if(isset($errors["category_id"])) {?>
+            <p class="error"><?= $errors["category_id"]?></p>
+        <?php } ?>
     </label>
     <button>Submit</button>
     </form>

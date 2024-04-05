@@ -1,19 +1,16 @@
 <?php require "views/components/head.php" ?>
     <?php require "views/components/navbar.php" ?>
-    <h1> POSTS </h1>
-    <ul>
-    <?php foreach($posts as $post){ ?>
-    <li>
-        <?= htmlspecialchars($post["title"]) ?>
-        <label>
+
+    <h1><?= htmlspecialchars($posts["title"]) ?></h1>
+    <label>
         <form class="delete-form" method="POST" action="/delete">
-            <Button name="id" value=" <?= $post['id'] ?>">Delete</Button>
+            <Button name="id" value=" <?= $_GET['id'] ?>">Delete</Button>
         </form>
         <form class="edit-form" action="/edit">
-            <Button name="id" value=" <?= $post['id'] ?>">eidut</Button>
+            <Button name="id" value=" <?= $_GET['id'] ?>">edit</Button>
         </form>
-        </label>
-    </li>
-    <?php } ?>
-    </ul>
+    </label>
+
+    
+
 <?php require "views/components/footer.php" ?>
