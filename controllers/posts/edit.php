@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" ){
 }
 $params[":id"] = $_GET["id"];
 $query = "SELECT * FROM posts WHERE id = :id";
-$posts = $db->execute($query, $params)->fetch();
+$post = $db->execute($query, $params)->fetch();
 
 $title = "Edut";
 require "views/posts/edit.view.php";
